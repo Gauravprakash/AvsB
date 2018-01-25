@@ -1,0 +1,151 @@
+//
+//  PrefixHeader.pch
+//  AvsB
+//
+//  Created by Techwin Labs 28 Dec on 13/06/17.
+//  Copyright © 2017 Techwin Labs. All rights reserved.
+//
+
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import <QuartzCore/QuartzCore.h>
+#import "AppDelegate.h"
+#import "Constant.h"
+#import "SignUpView.h"
+#import "NSString+CheckPoint.h"
+#import "LoginView.h"
+#import "HomeScreen.h"
+#import "TPKeyboardAvoidingScrollView.h"
+#import "TabControlSection.h"
+#import "EmailLoginView.h"
+#import "PhoneVerificationView.h"
+#import "NamePasswordView.h"
+#import "UniqueUserView.h"
+#import "FindFacebookFriends.h"
+#import "ForgotPasswordView.h"
+#import "CommonMethods.h"
+#import "SearchProfile.h"
+#import "TabControlSection.h"
+#import "CommentSection.h"
+#import "HomeCell.h"
+#import "getReplyOnComment.h"
+#import "AddProfilePicture.h"
+#import "EditCollectionCell.h"
+#import "CALayer+BorderProperties.h"
+#import "Facebookdelegates.h"
+#import "SVProgressHUD.h"
+#import "AFNetworking.h"
+#import "PostaQuestionView.h"
+#import "ReviewTask.h"
+#import "UserProfile.h"
+#import "SettingsView.h"
+#import "EditProfile.h"
+#import "NSMutableAttributedString+FormatLabel.h"
+#import "FollowersProfile.h"
+#import "FollowersProfileCell.h"
+#import "SearchViewCell.h"
+#import "RateController.h"
+#import "Reachability.h"
+#import "NotificationCell.h"
+#import "FollowingCell.h"
+#import "WebServices.h"
+#import "ColorCollectionCell.h"
+#import "TextSelectionCell.h"
+#import "FontColorSelectionCell.h"
+#import "SearchUsersProfile.h"
+#import <Social/Social.h>
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import <FBSDKLoginKit/FBSDKLoginKit.h>
+#import "UIImageView+AFNetworking.h"
+#import "UIImageView+WebCache.h"
+#import "SuggestionCell.h"
+#import <Social/Social.h>
+#import <MessageUI/MessageUI.h>
+#import "ChangePassword.h"
+#import "BlockedusersListing.h"
+#import "BlockedCell.h"
+#import "DetailPost.h"
+#import "HPGrowingTextView.h"
+#import "ResponsiveLabel.h"
+
+#define SIGN_UP_SCREEN @"SignUpView"
+#define EMAIL_SIGN_UP__SCREEN @"EmailLoginView"
+#define LOGIN_VIEW_SCREEN @"LoginView"
+#define FORGOT_PASSWORD_SCREEN @"ForgotPasswordView"
+#define PHONE_VERFICATION_SCREEN @"PhoneVerificationView"
+#define FACEBOOK_FRIENDS_SCREEN @"FindFacebookFriends"
+#define NAME_PASSWORDVIEW @"NamePasswordView"
+#define PHONE_VERIFICATION_SCREEN @"PhoneVerificationView"
+#define EMAIL_LOGIN_VIEW @"EmailLoginView"
+#define UNIQUE_USER_VIEW @"UniqueUserView"
+#define EDIT_PROFILE_SCREEN @"EditProfile"
+#define SETTING_VIEW_SCREEN @"SettingsView"
+#define USER_PROFILE_SCREEN @"UserProfile"
+#define SEARCH_PROFILE_VIEW @"SearchProfile"
+#define NOTIFICATION_SCREEN_VIEW @"NotificationScreen"
+#define POST_A_QUESTION_VIEW @"PostaQuestionView"
+#define REVIEW_SCREEN_VIEW @"ReviewTask"
+#define TAB_CONTROL_SECTION @"TabControlSection"
+#define ADD_PROFILE_PICTURE @"AddProfilePicture"
+#define HOME_SCREEN_VIEW @"HomeScreen"
+#define COMMENT_SCREEN_VIEW @"CommentSection"
+#define QR_SCREEN @"QRViewController"
+#define FOLLOWERS_PROFILE_VIEW  @"FollowersProfile"
+#define RATE_CONTROLLER_VIEW @"RateController"
+#define SEARCH_USERS_PROFILE @"SearchUsersProfile"
+#define AUTHKEY  @"haveyouauthkey?Not!Goback!GetFirsT!:D"
+#define BLOCK_LIST_USERS @"BlockedusersListing"
+#define CHANGE_PASSWORD_VIEW @"ChangePassword"
+#define DETAIL_POST_VIEW @"DetailPost"
+
+
+#define INSTANTIATE(viewController) [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:viewController];
+#define INSTANTLY_ACTIVATE(TabController) [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateTabBarController WithIdentifier:TabController];
+#define IS_IPAD (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+#define IS_IPHONE (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+#define IS_RETINA ([[UIScreen mainScreen] scale] >= 2.0)
+#define SCREEN_WIDTH ([[UIScreen mainScreen] bounds].size.width)
+#define SCREEN_HEIGHT ([[UIScreen mainScreen] bounds].size.height)
+#define SCREEN_MAX_LENGTH (MAX(SCREEN_WIDTH, SCREEN_HEIGHT))
+#define SCREEN_MIN_LENGTH (MIN(SCREEN_WIDTH, SCREEN_HEIGHT))
+#define IS_ZOOMED (IS_IPHONE && SCREEN_MAX_LENGTH == 736.0)
+#define IS_IPHONE_4_OR_LESS (IS_IPHONE && SCREEN_MAX_LENGTH < 568.0)
+#define IS_IPHONE_5 (IS_IPHONE && SCREEN_MAX_LENGTH == 568.0)
+#define IS_IPHONE_6 (IS_IPHONE && SCREEN_MAX_LENGTH == 667.0)
+#define IS_IPHONE_6P (IS_IPHONE && SCREEN_MAX_LENGTH == 736.0)
+#endif /* PrefixHeader_pch */
+
+#define Login_URL @"http://52.214.66.14/avsb/api/app/login";
+#define Signup_URL @"http://52.214.66.14/avsb/api/app/signup";
+#define choseUserName_URL @"http://52.214.66.14/avsb/api/app/username_available"
+#define logOutURL @"http://52.214.66.14/avsb/api/app/logout"
+#define userNameAvailable_URL @"http://52.214.66.14/avsb/api/app/username_available"
+#define userprofile_URL @"http://52.214.66.14/avsb/api/app/profile"
+#define profileUpdated_URL @"http://52.214.66.14/avsb/api/app/updateprofile"
+#define picUpdated_URL@ "http://52.214.66.14/avsb/api/app/uploadprofilepicture"
+#define questionPic_URL @"http://52.214.66.14/avsb/api/app/uploadquestionpicture"
+#define questionadd_URL @"http://52.214.66.14/avsb/api/app/addquestion"
+#define homefeed_URL @"http://52.214.66.14/avsb/api/app/gethomequestions/"
+#define votefeed_URL @"http://52.214.66.14/avsb/api/app/votequestion"
+#define getQuestion_URL @"http://52.214.66.14/avsb/api/app/viewquestion/1"
+#define getComments_URL @"http://52.214.66.14/avsb/api/app/getcomments"
+#define getReplies_URL @"http://52.214.66.14/avsb/api/app/getreplyoncomment"
+#define likeOrUnlikeComment_URL @"http://52.214.66.14/avsb/api/app/likeunlikecomment"
+#define postComment_URL @"http://52.214.66.14/avsb/api/app/postcomment"
+#define postReply_URL @"http://52.214.66.14/avsb/api/app/postreplyoncomment"
+#define UploadSignupPic_URL @"http://52.214.66.14/avsb/api/app/upload_signup_picture"
+#define usernameSuggestion_URL @"http://52.214.66.14/avsb/api/app/username_suggestion"
+#define getAllQuestionsList_URL @"http://52.214.66.14/avsb/api/app/get_users_allquestion"
+#define getAllFollowersList_URL @"http://52.214.66.14/avsb/api/app/get_users_followers"
+#define getAllFollowingList_URL @"http://52.214.66.14/avsb/api/app/get_users_following"
+#define getfollowUnfollow_URL @"http://52.214.66.14/avsb/api/app/follow_unfollow_people"
+#define changePassword_URL @"http://52.214.66.14/avsb/api/app/change_password"
+#define notificationSetting_URL @"http://52.214.66.14/avsb/api/app/change_notification_setting"
+#define getNotification_URL @"http://52.214.66.14/avsb/api/app/get_notifications"
+#define getQuestionDetail_URL @"http://52.214.66.14/avsb/api/app/viewquestion"
+#define SearchQuery_URL @"http://52.214.66.14/avsb/api/app/globalSearch"
+#define get_Followers_Listing @"http://52.214.66.14/avsb/api/app/search_FollowerForTag"
+

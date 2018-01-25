@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="TextSelectionCell">
+            <rect key="frame" x="0.0" y="0.0" width="113" height="56"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="113" height="56"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P43-yw-82i">
+                        <rect key="frame" x="0.0" y="16" width="70" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="sD9-pf-Chz"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="xVE-Oa-Cqy"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.64815481090000004" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstItem="P43-yw-82i" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="QoW-Xl-Kuv"/>
+                <constraint firstAttribute="trailing" secondItem="P43-yw-82i" secondAttribute="trailing" id="bGt-fD-Flp"/>
+                <constraint firstItem="P43-yw-82i" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="pRZ-TP-a52"/>
+            </constraints>
+            <size key="customSize" width="110" height="56"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="bGt-fD-Flp"/>
+                </mask>
+            </variation>
+            <connections>
+                <outlet property="m_label" destination="P43-yw-82i" id="Azt-jO-LmY"/>
+            </connections>
+            <point key="canvasLocation" x="689.5" y="258"/>
+        </collectionViewCell>
+    </objects>
+</document>
